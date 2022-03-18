@@ -1,0 +1,17 @@
+[
+    {
+        "nome":"Naruto Uzumaki",
+        "email":"naruto@teste.com",
+        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+    },
+    {
+        "nome":"Sasuke Uchiha",
+        "email":"sasuke@teste.com",
+        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+    },
+    {
+        "nome":"Sakura Haruno",
+        "email":"sakura@teste.com",
+        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+    }
+]
