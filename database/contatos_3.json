@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "nome":"Vovó Chiyo",
+        "emails":["chiyo@sunagakure.com","chiyo-marionetes@gmail.com"],
+        "telefones":["99999-1111","98888-1234"]
+    },
+    {
+        "id":2,
+        "nome":"Ino BFF",
+        "emails":["ino@konoha.com","ino@yamanakas.com"],
+        "telefones":["99999-2222","98888-3333"]
+    }
+]
