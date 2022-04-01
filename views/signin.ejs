@@ -148,22 +148,22 @@
 <body>
 
     
-    <form>
+    <form action='/usuarios' method='post'>
         <label>
             Nome:
-            <input method='POST' action='/registro' type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome">
         </label>
         <label>
             E-mail:
-            <input method='POST' action='/registro' type="email" name="email" id="email">
+            <input type="email" name="email" id="email">
         </label>
         <label>
             Senha:
-            <input method='POST' action='/registro' type="email" name="email" id="email">
+            <input type="password" name="password" id="password">
         </label>
         <label>
             Confirmação de Senha:
-            <input method='POST' action='/registro' type="email" name="email" id="email">
+            <input type="password" name="check_password" id="check_password">
         </label>
         <div class="controles">
             <button class="link">Cancelar</button>
