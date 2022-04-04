@@ -1,7 +1,7 @@
 
 // Importar o express
 const express = require('express');
-
+const marcaEntradaDeRequisicao = require('./middlewares/marcaEntradaDeRequisicao');
 
 // Importar os roteadores
 const ContatosRouter = require('./routes/ContatosRouter');
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
-
+app.use(marcaEntradaDeRequisicao)
 // Configurar o ejs como um template engine
 
 app.set('view engine', 'ejs')
