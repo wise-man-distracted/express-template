@@ -2,6 +2,7 @@
 // Importar o express
 const express = require('express');
 const marcaEntradaDeRequisicao = require('./middlewares/marcaEntradaDeRequisicao');
+const session = require('express-session')
 
 // Importar os roteadores
 const ContatosRouter = require('./routes/ContatosRouter');
@@ -13,10 +14,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
-app.use(marcaEntradaDeRequisicao)
+// app.use(marcaEntradaDeRequisicao)
 // Configurar o ejs como um template engine
 
 app.set('view engine', 'ejs')
+
+app.use(session({
+    secret: "screto",
+    resave: false,
+    saveUninitialized: false
+}))
 
 // Criar rota get no endereço '/' para responder requisição com msg "olá"
 app.get('/', (req, res)=>{

@@ -20,5 +20,14 @@ module.exports = {
         usuarios.push(usuario)
         fs.writeFileSync(path.join(__dirname, '/../database/usuarios.json'), JSON.stringify(usuarios, null, 4));
         res.redirect('/contatos')
+    },
+    mostrarLogin: (req, res) => {
+        res.render('login')
+    },
+    login: (req, res) => {
+        let {email, senha} = req.body;
+        const usuarios = require('../database/usuarios.json')
+        usuarios.find(u => u.email == email && bcrypt.compareSync(senha, u.senha))
+        res.redirect;
     }
 }
