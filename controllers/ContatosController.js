@@ -1,11 +1,8 @@
-// Para teste
-const uid = 1;
-
 module.exports = {
 
     listarContatos: (req, res)=>{
 
-        let contatos = require(`../database/contatos_${uid}.json`)
+        let contatos = require(`../database/contatos_${req.usuario.id}.json`)
         res.render(
             'index', 
             {
@@ -16,7 +13,7 @@ module.exports = {
 
     capturarContato: (req, res) => {
 
-        let contatos = require(`../database/contatos_${uid}.json`)
+        let contatos = require(`../database/contatos_${req.usuario.id}.json`)
 
         // Descobrir o id do contato que o usuário quer
 
