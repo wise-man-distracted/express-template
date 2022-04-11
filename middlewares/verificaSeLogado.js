@@ -1,10 +1,7 @@
-const verificaSeLogado = (req, res, next) =>  {
-    if(req.session.usuario = undefined){
-        res.redirect('/login');
-    } else {
-        req.usuario = req.session.usuario;
-        next()
+module.exports = (req, res, next) =>  {
+    if(req.session.usuario == undefined){
+        return res.redirect('/login');
     }
+    req.usuario = req.session.usuario;
+    next()
 }
-
-module.exports = verificaSeLogado

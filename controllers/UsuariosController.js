@@ -27,13 +27,15 @@ module.exports = {
     },
     login: (req, res) => {
         const usuarios = require('../database/usuarios.json')
-        let {email, password} = req.body;
-        let usuario = usuarios.find(u => u.email == email && bcrypt.compareSync(password, u.senha))
-        if(usuario === undefined){
-            res.send('Usuario não encontrado')
-        } else {
+        let {email, senha} = req.body;
+        let usuario = usuarios.find(u => u.email == email && bcrypt.compareSync(senha, u.senha))
+        if(usuario == undefined){
+            return res.render("login.ejs", {erro:1, email, senha})
+        }/*  else {
             req.session.usuario = usuario;
             res.redirect('/contatos');
-        }
+        } */
+        req.session.usuario = usuario;
+        res.redirect('/contatos')
     }
 }
